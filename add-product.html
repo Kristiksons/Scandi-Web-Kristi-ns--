@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Add</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Product Add</h1>
+
+  <form id="product_form" onsubmit="saveProduct(event)">
+    <div>
+      <label>SKU</label><br>
+      <input type="text" id="sku" required>
+    </div>
+
+    <div>
+      <label>Name</label><br>
+      <input type="text" id="name" required>
+    </div>
+
+    <div>
+      <label>Price ($)</label><br>
+      <input type="number" id="price" required>
+    </div>
+
+    <div>
+      <label>Type Switcher</label><br>
+      <select id="productType" onchange="showFields()" required>
+        <option value="">Select Type</option>
+        <option value="DVD">DVD</option>
+        <option value="Book">Book</option>
+        <option value="Furniture">Furniture</option>
+      </select>
+    </div>
+
+    <div id="DVD" class="product-type">
+      <label>Size (MB)</label><br>
+      <input type="number" id="size"><br>
+      Product description: Size in MB
+    </div>
+
+    <div id="Book" class="product-type">
+      <label>Weight (KG)</label><br>
+      <input type="number" id="weight"><br>
+      Product description: Weight in KG
+    </div>
+
+    <div id="Furniture" class="product-type">
+      <label>Height (CM)</label><br>
+      <input type="number" id="height"><br>
+      <label>Width (CM)</label><br>
+      <input type="number" id="width"><br>
+      <label>Length (CM)</label><br>
+      <input type="number" id="length"><br>
+      Product description: Please provide dimensions in HxWxL format
+    </div>
+
+    <br>
+    <button type="submit">Save</button>
+    <button type="button" onclick="goBack()">Cancel</button>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>
