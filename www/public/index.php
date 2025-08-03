@@ -18,6 +18,8 @@
     <!-- Products will be shown here -->
   </div>
 
+<p><?php echo "The current PHP version in use is" . phpversion(); ?></p>
+
   <script src="script.js"></script>
 </body>
 </html>
